@@ -1,10 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 
 const EditContact = ()=> {
     const {id} = useParams();
+
+    const contacts = useSelector(state=>state);
+    const currenContact = contacts.find(contact=> contact.id === parseInt(id));
+
+
     return (
-        <div className="container">
+      <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-6 shadow p-5">
           <h1 className="display-3 text-center mb-4">Edit Student {id}</h1>
