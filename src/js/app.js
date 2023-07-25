@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "../components/Home";
 import AddContact from "../components/AddContact";
+import EditContact from "../components/EditContact";
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/add" element={<AddContact/>} />
-        <Route path="/edit/:id" element={<h1>I am the Edit Component</h1>} />
+        <Route path="/edit/:id" element={<EditContact/>} />
       </Routes>
     </div>
   );
